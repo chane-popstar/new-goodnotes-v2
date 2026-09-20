@@ -1,0 +1,12 @@
+<!-- manifest.json の読み込み -->
+<link rel="manifest" href="/manifest.json" />
+<meta name="theme-color" content="#4f46e5" />
+
+<!-- sw.js の登録スクリプト -->
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js').catch(console.error);
+    });
+  }
+</script>
